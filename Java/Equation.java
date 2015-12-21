@@ -1,7 +1,9 @@
 abstract class Equation{
-    int x, y;
-    double finalAnswer; 
+    //int x, y;
+    Fraction frac1, frac2; 
+	Fraction finalAnswer; 
+	double finalValue; 
     
-    abstract void computeAnswer(); 
+    abstract Fraction computeAnswer(); 
     abstract boolean isCorrect(double val); 
 }

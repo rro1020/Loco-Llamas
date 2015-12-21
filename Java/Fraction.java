@@ -19,11 +19,14 @@ public class Fraction{
 		this.isMixed = true; 
 		this.value = mixedNumber + (double) numerator/denominator; 
 	}
-    
+	
     public Fraction(String s){
         String[] f = s.split("/"); 
         this.numerator = Integer.parseInt(f[0]); 
         this.denominator = Integer.parseInt(f[1]); 
+		this.mixedNumber = 0; 
+		this.isMixed = false; 
+		this.value = mixedNumber + (double) numerator/denominator; 
     }
     
     public int getNumerator(){
