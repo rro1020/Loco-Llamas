@@ -1,5 +1,5 @@
-class Addition extends Equation{
-    public Addition(Fraction a, Fraction b){
+class Subtraction extends Equation{
+    public Subtraction(Fraction a, Fraction b){
 		this.frac1 = a; 
 		this.frac2 = b; 
 		System.out.println("frac1 = " + frac1.getValue()); 
@@ -7,16 +7,15 @@ class Addition extends Equation{
 		
 		Fraction sumFrac; 
 		if (frac1.getDenominator() == frac2.getDenominator()){
-			sumFrac = new Fraction((frac1.getNumerator() + frac2.getNumerator()), frac1.getDenominator()); 
+			sumFrac = new Fraction((frac1.getNumerator() - frac2.getNumerator()), frac1.getDenominator()); 
 		} else {
 			int lcd = lcm(frac1.getDenominator(), frac2.getDenominator()); 
-			sumFrac = new Fraction(frac1.getNumerator() * lcd/frac2.getDenominator() + 
-								   frac2.getNumerator() * lcd/frac1.getDenominator(), lcd); 
+			sumFrac = new Fraction(-1 * frac1.getNumerator() * lcd/frac2.getDenominator() + frac2.getNumerator() * lcd/frac1.getDenominator(), lcd); 
 		}
 		this.finalAnswer = sumFrac; 
+		finalAnswer.print(); 
 		
-		
-		this.finalValue = frac1.getValue() + frac2.getValue(); 
+		this.finalValue = frac1.getValue() - frac2.getValue(); 
     }
 
     Fraction computeAnswer(){

@@ -1,13 +1,12 @@
-class Multiplication extends Equation{
-    public Multiplication(Fraction a, Fraction b){
-
+class Division extends Equation{
+    public Division(Fraction a, Fraction b){
 		this.frac1 = a; 
 		this.frac2 = b;
 		
-		Fraction productFrac = new Fraction(frac1.getNumerator() * frac2.getNumerator(), frac1.getDenominator() * frac2.getDenominator()); 
-
-		this.finalAnswer = productFrac; 
-		this.finalValue = frac1.getValue() * frac2.getValue(); 	
+		Fraction quotientFrac = new Fraction(frac1.getNumerator() * frac2.getDenominator(), frac1.getDenominator() * frac2.getNumerator()); 
+		
+		this.finalAnswer = quotientFrac; 
+		this.finalValue = frac1.getValue() / frac2.getValue(); 	
     }
     
     Fraction computeAnswer(){

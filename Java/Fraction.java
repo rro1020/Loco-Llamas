@@ -52,5 +52,9 @@ public class Fraction{
     public void setDenominator(int d){
         this.denominator = d; 
     }
-    
+	
+    public void print(){
+		System.out.println(numerator + " / " + denominator); 
+	}
+	
 }
